@@ -19,14 +19,17 @@ public class Druide {
 	public String getNom() {
 		return nom;
 	}
+	public int getForcePotion() {
+		return forcePotion;
+	}
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "<<" + texte + ">>");
+		System.out.println(prendreParole() + " <<" + texte + ">>");
 		
 	}
 	
 	private String prendreParole() {
-		return "Le druide" + nom + ":";
+		return "Le druide " + nom + " : ";
 	}
 	
 	public void preparerPotion() {
@@ -40,10 +43,13 @@ public class Druide {
 		}
 	}
 	
-	public int getForcePotion() {
-		// TODO Auto-generated method stub
-		return forcePotion;
+	public void booster(Gaulois gaulois) {
+		if (gaulois.getNom() == "Obélix") {
+			parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+		}
+		
 	}
+
 	
 	
 	public static void main(String[] args) {
