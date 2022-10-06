@@ -1,10 +1,20 @@
 package personnages;
 
 public class Village {
+	private String nom;
+	private Chef chef;
+
+	
+	public Village(String nom) {
+		super();
+		this.nom = nom;
+	}
+	public void setChef(Chef chef) {
+		this.chef = chef;
+	}
 
 	public String getNom() {
-		// TODO Auto-generated method stub
-		return null;
+		return nom;
 	}
 
 }

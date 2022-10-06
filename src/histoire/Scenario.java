@@ -4,6 +4,7 @@ import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
 
+
 public class Scenario {
 
 	
@@ -11,14 +12,15 @@ public class Scenario {
 		// TODO Auto-generated method stub
 		Gaulois asterix = new Gaulois("Asterix", 8);
 		Gaulois obelix = new Gaulois("Obélix", 100);
-		Romain minus = new Romain("Minus", 6);
+		Romain minus = new Romain("Minus", 15);
 		Druide panoramix = new Druide("Panoramix", 5, 10);
 		
 		
 		panoramix.parler("Je vais préparer une petite potion...");
 		panoramix.preparerPotion();
-		obelix.boirePotion(panoramix);
-		asterix.parler("Bonjour à tous");
+		panoramix.booster(obelix);
+		panoramix.booster(asterix);
+		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);
