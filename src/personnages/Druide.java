@@ -2,6 +2,7 @@ package personnages;
 
 
 import java.util.Random;
+
 public class Druide {
 	private String nom;
 	private int effetPotionMin;
@@ -55,8 +56,6 @@ public class Druide {
 		}
 	
 	}	
-
-	
 	
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix", 5, 10);
