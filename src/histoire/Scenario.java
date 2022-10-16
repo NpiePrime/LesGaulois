@@ -21,6 +21,7 @@ public class Scenario {
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);
+	
 		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
