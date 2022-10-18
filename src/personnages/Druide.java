@@ -36,7 +36,8 @@ public class Druide {
 	public void preparerPotion() {
 		Random random = new Random();
 		forcePotion = random.nextInt(effetPotionMax);
-		//Question 3.C ???
+	
+		
 		if(forcePotion < effetPotionMin) {
 			preparerPotion();
 		}
