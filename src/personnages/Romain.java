@@ -3,14 +3,14 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
-	private Equipement[] equipements; 
+	private Equipement[] equipements;
 	private int nbEquipement = 0;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 		this.equipements = new Equipement[2];
-		assert isForcePositive();
+		assert force > 0;
 	}
 
 	public String getNom() {
@@ -21,17 +21,8 @@ public class Romain {
 		return force;
 	}
 
-	private boolean isForcePositive() {
-		boolean forcePositive = false;
-		if (force > 0) {
-			forcePositive = true;
-		}
-
-		return forcePositive;
-	}
-
 	public void recevoirCoup(int forceCoup) {
-		assert isForcePositive();
+		assert force > 0;
 
 		int forceOrigine = force;
 		force -= forceCoup;
@@ -77,7 +68,7 @@ public class Romain {
 	private void ajouterEquipement(Equipement equipement) {
 		equipements[nbEquipement] = equipement;
 		System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement + ".");
-		nbEquipement ++;
+		nbEquipement++;
 	}
 
 	public static void main(String[] args) {
@@ -89,14 +80,3 @@ public class Romain {
 		minus.sEquiper(Equipement.BOUCLIER);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
